@@ -5,7 +5,11 @@ const { Client, GatewayIntentBits } = require("discord.js");
 const moment = require("moment-timezone");
 
 const app = express();
-app.get("/", (req, res) => res.send("Bot is running!"));
+
+app.get("/", (req, res) => {
+  res.send("Bot is running!");
+});
+
 app.listen(process.env.PORT || 3000);
 
 const client = new Client({
@@ -34,7 +38,7 @@ client.once("clientReady", async () => {
 
   setInterval(async () => {
     await channel.send(createMessage());
-  }, 60 * 1000);
+  }, 60 * 60 * 1000); // كل ساعة
 });
 
 client.login(process.env.TOKEN);
