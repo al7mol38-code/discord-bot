@@ -7,7 +7,7 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds]
 });
 
-const CHANNEL_ID = PROCESS.ENV.CHANNEL_ID;
+const CHANNEL_ID =  process.env.CHANNEL_ID;
 
 function createMessage() {
   return `# 🌍 Server Times
