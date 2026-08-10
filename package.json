@@ -8,6 +8,7 @@
   "dependencies": {
     "discord.js": "^14.16.3",
     "dotenv": "^16.4.7",
-    "moment-timezone": "^0.5.48"
+    "moment-timezone": "^0.5.48",
+    "express": "^4.21.2"
   }
 }
